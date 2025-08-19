@@ -10,10 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "5.x",
+    "@reduxjs/toolkit": "^2.8.2",
     "@types/react-router": "^5.1.20",
+    "antd": "^5.27.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-redux": "^9.2.0",
     "react-router": "^7.8.0",
+    "sass": "^1.90.0",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {

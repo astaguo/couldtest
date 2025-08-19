@@ -19,5 +19,20 @@ export default tseslint.config([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
+    rules: {
+      'sort-keys': [
+        'error',
+        'asc',
+        {
+          caseSensitive: true,
+          natural: true,
+          minKeys: 2,
+        },
+      ],
+      indent: ["error", 2, { SwitchCase: 1 }],
+      "no-tabs": "error",
+      "react/jsx-indent": ["error", 2],
+      "react/jsx-indent-props": ["error", 2],
+    },
   },
 ])

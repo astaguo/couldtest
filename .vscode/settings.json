@@ -1,0 +1,17 @@
+{
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "[handlebars]": {
+      "editor.formatOnSave": false
+    },
+    "[yaml]": {
+      "editor.formatOnSave": false
+    },
+    "eslint.nodePath": ".yarn/sdks",
+    "cSpell.words": [
+      "Datacap"
+    ],
+}

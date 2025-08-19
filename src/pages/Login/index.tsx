@@ -4,6 +4,8 @@ import Card from './component/Card';
 import Input from './component/Input';
 import Pattern from './component/Pattern';
 import { useNavigate } from 'react-router';
+import { createStorage } from '../../utils/localStorageUtil';
+import { Alert } from 'antd';
 
 function Login() {
   const [username, setUsername] = useState<string>('');
@@ -12,9 +14,10 @@ function Login() {
 
   const submit = () => {
     if (username === 'asta' && password === '123456') {
+      createStorage().set('token', '123456');
       navigate('/home');
     } else {
-      alert('username or password is failed!!!');
+      <Alert message="username or password is failed!!!" type="error" />
     }
   };
   return (
