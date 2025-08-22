@@ -3,23 +3,33 @@ import { Content, Footer, Header } from "antd/es/layout/layout";
 import './Layout.index.scss';
 import LeftMenu from "./component/Menu";
 import { createStorage } from "../../utils/localStorageUtil";
-import { useNavigate } from "react-router";
+import { Outlet, useNavigate } from "react-router";
+import { useEffect } from "react";
 
 const Home = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    // Verify auth
+    const result = createStorage().has('token');
+    if (!result) {
+      navigate('/login')
+    }
+  }, [])
 
   return (
     <Layout className="layout">
       <LeftMenu />
       <Layout>
-        <Header>Header</Header>
-        <Content>
+        <Header>
           <Button type='primary' onClick={() => {
             createStorage().clearNamespace();
             navigate('/login')
-          }} >Go to login</Button>
+          }} >Logout</Button>
+        </Header>
+        <Content>
+          <Outlet />
         </Content>
-        <Footer>Footer</Footer>
       </Layout>
     </Layout>
   )

@@ -15,7 +15,7 @@ function Login() {
   const submit = () => {
     if (username === 'asta' && password === '123456') {
       createStorage().set('token', '123456');
-      navigate('/home');
+      navigate('/');
     } else {
       <Alert message="username or password is failed!!!" type="error" />
     }

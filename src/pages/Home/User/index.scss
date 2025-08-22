@@ -1,0 +1,17 @@
+$headerHeight: 50px;
+
+.content {
+  height: 100%;
+
+  .content-header {
+    height: $headerHeight;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .content-body {
+    height: calc(100% - $headerHeight);
+    background-color: bisque;
+  }
+}
